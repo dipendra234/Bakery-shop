@@ -1,0 +1,359 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+nav{
+    position: fixed;
+    height: 100px;
+    z-index: 99;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px #000;
+    background: 0 ,0,0,5 ;
+     
+}
+.nav_text{
+    font-size: 2em;
+    font-weight: 700;
+    margin-left: 10px;
+
+
+}
+ #check{
+    display: none;
+}
+.right ul{
+    display: flex;
+
+}
+.right li{
+    color:black;
+    list-style: none;
+    margin: 0 15px;
+    font-size: 1.3rem;
+
+}
+li a{
+    text-decoration: none;
+    color: black;
+    transition: all .55s ease;
+
+}
+.menu-line{
+    display: none;
+}
+ 
+a:hover{
+    background-color: darkcyan;
+    padding: 5px 5px;
+    border: 3px solid red;
+    color: white;
+    border-radius: 10%;
+}
+
+
+
+.bg_items{
+    background: url(Desktop\ -\ 6\ \(2\).jpg);
+    background-repeat:no-repeat;
+    background-size: cover; 
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: grid;
+    gap:2rem;
+ grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+h5{
+    font-size: 4rem;
+    font-weight: 550;
+    font-family: dm Serif Display;
+}
+p{
+    font-size: 2em;
+    font-weight: 200;
+    font-family: DM Serif Display;
+}
+.cake-img{
+    margin-top:6rem;
+    width: auto auto;
+    
+    
+
+}
+.product-text{
+    text-align: center;
+    font-size: 5em;
+    font-weight: 300;
+    font-family: serif;
+    margin-top: 80px;
+}
+.cards{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin:100px auto;
+    align-items: center;
+    height: 50vh;
+}
+
+.card img{
+    height:400px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left:0;
+    transition:transform , 0.5s;
+   
+    
+
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient();
+    border-radius: 10px ;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column;
+    padding: 0 40px;
+    font-size: 14px; */
+    transition:0.5s ease-in;
+    opacity: 0;
+
+}
+.overlay h3{
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-size: 30px;
+    letter-spacing: 2px;
+
+}
+.overlay a{
+    margin-top: 20rem;
+    margin-right: 1rem;
+    color: #262626;
+    text-decoration: none;
+    font-size: 15px;
+    background: #fff;
+    border-radius: 10px;
+    background-color: aquamarine;
+    padding: 5px 5px ;
+
+}
+
+.card:hover .overlay{
+    height: 100%;
+    opacity: 1;
+}
+.card{
+    
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0px 7px 10px rgba(0, 0,0,0.5) ;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color:#fff;
+}
+.card:hover{
+    transform: translateY(20px);
+}
+
+.card .info{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+
+}
+.cont{
+    margin-top: 300px;
+    /* text-align: center; */
+    font-size: 30px;
+    background-color: rgba(94, 152, 133, 0.722);
+    height: 80vh;
+    padding-left: 20px;
+    
+}
+.cont h5{
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+.cont input{
+    font-size: 20px;
+    margin-left: 40px;
+    margin-top: 30px;
+   margin-right: 30px;
+   width: auto;
+}
+#cont-btn{
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 10px;
+    padding: 8px 8px;
+    background-color: darkseagreen;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 5px;
+}
+#cont-btn:hover{
+   color:#fff;
+   background-color: #262626;
+ 
+   
+}
+#mess-box{
+    margin-left:135px ;
+    margin-top: 20px;
+    
+}
+
+.description{
+    margin-top: 200px;
+    text-align: center;
+    background-color: cadetblue;
+   
+}
+.description p{
+    display: block;
+    margin-top: 100px;
+    text-align: left;
+}
+
+#check:checked ~ .right{
+    left: 0;
+    
+
+}
+
+
+@media (max-width:900px){
+    .bg_items{
+        display: flex;
+        flex-direction: column;
+    }
+    .bg-text h5{
+      
+        font-size: 50px;
+        margin-right: 18rem;
+
+       
+    }
+    .bg-text{
+        display: block;
+        font-size:15px;
+        
+       
+    }
+    .cake-img img{
+        margin-right: 158px;
+        width: 400px;
+    }
+}
+
+
+
+@media only screen and (max-width: 700px){
+    .cards{
+       flex-direction: column;
+       height: 300vh;
+
+        
+    }
+    
+    
+
+    .cake-img img{
+       
+        width:300px ;
+        height:auto;        
+    }
+    .bg-text h5{
+      margin-left: 20px;
+        font-size: 40px;
+        margin-right: 18rem;
+       
+    }
+    .bg-text{
+        display: block;
+        font-size: 20px;
+        margin-left: 30px;
+       
+    }
+    .menu-line{
+        display: block;
+        cursor: pointer;
+
+    }
+    .menu{
+        width: 30px;
+        height: 3px;
+        background-color: #000;
+        margin:6px 0;
+
+    }
+    .right{
+        height: 50vh;
+        position: absolute;
+        background-color: rgba(133, 175, 91, 0.529);
+        top: 100px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        transition: 0.2s;
+        left: -110%;
+        overflow: hidden;
+      
+
+
+    }
+    .right ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+       
+        
+
+        
+
+    }
+   .right ul li a{
+    display: block;
+    margin-bottom: 50px;
+  
+   }
+
+}
+
+@media (max-width:600){
+
+    .cake-img{
+        width: 800px;
+        height: auto;
+
+    }
+    .bg-text{
+        font-size: 50px;
+    }
+}
